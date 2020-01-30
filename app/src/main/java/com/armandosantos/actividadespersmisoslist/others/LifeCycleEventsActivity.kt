@@ -1,4 +1,4 @@
-package com.armandosantos.actividadespersmisoslist.activities
+package com.armandosantos.actividadespersmisoslist.others
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -5,15 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.armandosantos.actividadespersmisoslist.activities.*
+import com.armandosantos.actividadespersmisoslist.others.ToolbarActivity
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        toolbarToLoad(toolbar as Toolbar)
 
         val btnLifeCycle = findViewById<Button>(R.id.btn1)
         val btnClickEvents = findViewById<Button>(R.id.btn2)
@@ -33,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         btnIntents.setOnClickListener { goToIntentsActivity() }
         btnPermission.setOnClickListener { goToPermissionsActivity() }
         btnSharedPreferences.setOnClickListener { goToSharedPreferencesActivity() }
-        btnExtensionFunctions.setOnClickListener { goToAndroidExtActivity() }
+        btnExtensionFunctions.setOnClickListener { goToExtensionsFunctionsActivity() }
     }
 
     fun showToast() {
